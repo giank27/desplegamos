@@ -1,0 +1,17 @@
+// Variables corporativas del proyecto
+$primary: #03c6fc;
+$secondary: #000000;
+$background: #a6a6a6;
+
+// Sobrescribir variables de Bootstrap
+$body-bg: $background;
+$body-color: #111111;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "background": $background,
+  "dark": $secondary,
+  "light": #f8f9fa,
+  "info": $primary
+);

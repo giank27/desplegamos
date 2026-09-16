@@ -1,0 +1,59 @@
+---
+// src/components/Navbar.astro
+import { Image } from "astro:assets";
+import logoImg from "../assets/logo_cohete_letra_D_transparente.png";
+---
+
+<nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center brand-container" href="/">
+      <Image
+        src={logoImg}
+        alt="D"
+        width={80}
+        height={80}
+        class="brand-logo d-inline-block"
+      />
+      <span class="brand-text"
+        >esplegamos<span class="brand-accent">.</span></span
+      >
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Alternar navegación"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+      <ul class="navbar-nav align-items-lg-center mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#inicio"
+            >Inicio</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#seccion-1">Sección # 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#seccion-2">Sección # 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#seccion-3">Sección # 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#seccion-4">Sección # 4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#seccion-5">Sección # 5</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

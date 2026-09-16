@@ -1,0 +1,443 @@
+---
+// src/components/FloatingStoreIcons.astro
+---
+
+<div class="floating-stage-container">
+  <!-- Fondo con resplandor ambiental y órbitas decorativas -->
+  <div class="ambient-glow"></div>
+  <div class="orbit-ring orbit-ring-outer"></div>
+  <div class="orbit-ring orbit-ring-inner"></div>
+
+  <!-- Nexus orbital central tecnológico -->
+  <div class="orbital-nexus"></div>
+
+  <!-- TARJETA 1: Apple App Store (Cuadrante Superior Izquierdo) -->
+  <div class="store-card card-apple" id="store-card-apple">
+    <div class="card-glass">
+      <div class="icon-box icon-apple">
+        <!-- SVG Oficial Apple App Store -->
+        <svg viewBox="0 0 800 800" width="54" height="54" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="appleGrad" x1="400" y1="800" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#18BFFB"/>
+              <stop offset="1" stop-color="#2072F3"/>
+            </linearGradient>
+            <filter id="shadowApple" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#2072F3" flood-opacity="0.35"/>
+            </filter>
+          </defs>
+          <rect width="800" height="800" rx="180" fill="url(#appleGrad)" filter="url(#shadowApple)"/>
+          <path fill="#FFFFFF" d="M396.6,183.8l16.2-28c10-17.5,32.3-23.4,49.8-13.4s23.4,32.3,13.4,49.8L319.9,462.4h112.9
+            c36.6,0,57.1,43,41.2,72.8H143c-20.2,0-36.4-16.2-36.4-36.4c0-20.2,16.2-36.4,36.4-36.4h92.8l118.8-205.9l-37.1-64.4
+            c-10-17.5-4.1-39.6,13.4-49.8c17.5-10,39.6-4.1,49.8,13.4L396.6,183.8L396.6,183.8z M256.2,572.7l-35,60.7
+            c-10,17.5-32.3,23.4-49.8,13.4S148,614.5,158,597l26-45C213.4,542.9,237.3,549.9,256.2,572.7L256.2,572.7z M557.6,462.6h94.7
+            c20.2,0,36.4,16.2,36.4,36.4c0,20.2-16.2,36.4-36.4,36.4h-52.6l35.5,61.6c10,17.5,4.1,39.6-13.4,49.8c-17.5,10-39.6,4.1-49.8-13.4
+            c-59.8-103.7-104.7-181.3-134.5-233c-30.5-52.6-8.7-105.4,12.8-123.3C474.2,318.1,509.9,380,557.6,462.6L557.6,462.6z"/>
+        </svg>
+      </div>
+      <div class="card-details">
+        <div class="tag-row">
+          <span class="store-tag tag-ios">iOS / iPadOS</span>
+        </div>
+        <h4 class="store-title">App Store</h4>
+        <span class="store-sub">Apple Developer Program</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TARJETA 2: Google Play Store (Cuadrante Medio Derecho) -->
+  <div class="store-card card-google" id="store-card-google">
+    <div class="card-glass">
+      <div class="icon-box icon-google">
+        <!-- SVG Oficial Google Play 2022 -->
+        <svg viewBox="0 0 28.99 31.99" width="46" height="50" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.54 15.28.12 29.34a3.66 3.66 0 0 0 5.33 2.16l15.1-8.6Z" fill="#ea4335"/>
+          <path d="m27.11 12.89-6.53-3.74-7.35 6.45 7.38 7.28 6.48-3.7a3.54 3.54 0 0 0 1.5-4.79 3.62 3.62 0 0 0-1.5-1.5z" fill="#fbbc04"/>
+          <path d="M.12 2.66a3.57 3.57 0 0 0-.12.92v24.84a3.57 3.57 0 0 0 .12.92L14 15.64Z" fill="#4285f4"/>
+          <path d="m13.64 16 6.94-6.85L5.5.51A3.73 3.73 0 0 0 3.63 0 3.64 3.64 0 0 0 .12 2.65Z" fill="#34a853"/>
+        </svg>
+      </div>
+      <div class="card-details">
+        <div class="tag-row">
+          <span class="store-tag tag-android">Android & Tablets</span>
+        </div>
+        <h4 class="store-title">Google Play</h4>
+        <span class="store-sub">Google Play Console</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TARJETA 3: Huawei AppGallery (Cuadrante Inferior Izquierdo) -->
+  <div class="store-card card-huawei" id="store-card-huawei">
+    <div class="card-glass">
+      <div class="icon-box icon-huawei">
+        <!-- SVG Oficial Huawei AppGallery -->
+        <svg viewBox="0 0 36 36" width="52" height="52" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient x1="18" y1="0" x2="18" y2="36" id="huaweiGrad" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FB6361" offset="0%"/>
+              <stop stop-color="#ED3E45" offset="100%"/>
+            </linearGradient>
+          </defs>
+          <path d="M 10.101,0 C 2.7051128,0 0,2.704641 0,10.099029 V 25.900971 C 0,33.295359 2.7051128,36 10.101,36 H 25.894186 C 33.289863,36 36,33.295359 36,25.900971 V 10.099029 C 36,2.704641 33.294887,0 25.899,0 Z" fill="url(#huaweiGrad)"/>
+          <path d="m 15.703052,20.879251 h 1.445267 l -0.725093,-1.68629 z m -0.355892,0.8498 -0.428806,0.981162 h -0.976243 l 2.076035,-4.709924 h 0.843724 l 2.067644,4.709924 H 17.92723 l -0.423308,-0.981162 z m 15.709293,0.97769 H 32 V 18 h -0.943547 z m -3.755381,-2.021928 h 1.73924 v -0.858191 h -1.73924 v -0.96467 h 2.524806 v -0.85848 h -3.468064 v 4.706451 h 3.558917 v -0.85848 H 27.301072 Z M 23.552056,21.24093 22.482355,18 h -0.780647 l -1.069701,3.24093 -1.041055,-3.238326 h -1.017908 l 1.642888,4.710213 h 0.791353 l 1.071437,-3.093944 1.071437,3.093944 h 0.798297 l 1.638548,-4.710213 H 24.595426 Z M 12.501762,20.697833 c 0,0.76618 -0.380486,1.1756 -1.071437,1.1756 -0.694712,0 -1.077223,-0.421283 -1.077223,-1.208296 V 18.003183 H 9.3968234 v 2.69465 c 0,1.32548 0.7366666,2.085584 2.0204816,2.085584 1.296545,0 2.039867,-0.774571 2.039867,-2.124935 v -2.658193 h -0.95541 z M 7.1153548,18.000289 h 0.9556995 v 4.712817 H 7.1153548 V 20.799103 H 4.9562782 v 1.914003 H 4 v -4.712817 h 0.9562782 v 1.900983 h 2.1590766 z" fill="#ffffff"/>
+          <path d="M 18,12 C 14.691262,12 12,9.3084491 12,6 h 0.847512 c 0,2.8408565 2.311632,5.152199 5.152488,5.152199 2.840856,0 5.152488,-2.3113425 5.152488,-5.152199 H 24 c 0,3.3084491 -2.691551,6 -6,6" fill="#ffffff"/>
+        </svg>
+      </div>
+      <div class="card-details">
+        <div class="tag-row">
+          <span class="store-tag tag-huawei">HarmonyOS</span>
+        </div>
+        <h4 class="store-title">AppGallery</h4>
+        <span class="store-sub">Huawei Developer Console</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  // Variables locales del componente
+  $cyan-accent: #03c6fc;
+
+  .floating-stage-container {
+    position: relative;
+    width: 100%;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+  }
+
+  // Resplandor ambiental de fondo
+  .ambient-glow {
+    position: absolute;
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(3, 198, 252, 0.22) 0%, rgba(32, 114, 243, 0.12) 40%, rgba(0, 0, 0, 0) 70%);
+    filter: blur(50px);
+    pointer-events: none;
+    animation: glowPulse 8s ease-in-out infinite alternate;
+  }
+
+  @keyframes glowPulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.55;
+    }
+    100% {
+      transform: scale(1.15);
+      opacity: 0.9;
+    }
+  }
+
+  // Anillos orbitales tecnológicos
+  .orbit-ring {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+
+    &.orbit-ring-outer {
+      width: 470px;
+      height: 470px;
+      border: 1px dashed rgba(255, 255, 255, 0.1);
+      animation: rotateOrbit 50s linear infinite;
+    }
+
+    &.orbit-ring-inner {
+      width: 310px;
+      height: 310px;
+      border: 1px solid rgba(3, 198, 252, 0.16);
+      animation: rotateOrbitReverse 32s linear infinite;
+    }
+  }
+
+  @keyframes rotateOrbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  @keyframes rotateOrbitReverse {
+    from {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  }
+
+  // Nexus orbital central luminoso
+  .orbital-nexus {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: $cyan-accent;
+    box-shadow: 0 0 20px 6px rgba(3, 198, 252, 0.6), 0 0 40px 15px rgba(3, 198, 252, 0.2);
+    pointer-events: none;
+    z-index: 2;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -14px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(3, 198, 252, 0.4);
+      animation: nexusPulse 3.5s ease-out infinite;
+    }
+  }
+
+  @keyframes nexusPulse {
+    0% {
+      transform: scale(0.6);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2.8);
+      opacity: 0;
+    }
+  }
+
+  // Tarjetas flotantes comunes
+  .store-card {
+    position: absolute;
+    z-index: 10;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+    cursor: default;
+
+    .card-glass {
+      display: flex;
+      align-items: center;
+      gap: 1.15rem;
+      padding: 1.05rem 1.45rem;
+      background: rgba(10, 16, 26, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 20px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
+      transition: all 0.35s ease;
+      min-width: 255px;
+    }
+
+    &:hover {
+      z-index: 30;
+      animation-play-state: paused !important;
+
+      .card-glass {
+        transform: scale(1.06);
+        border-color: rgba(3, 198, 252, 0.65);
+        box-shadow: 0 24px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(3, 198, 252, 0.4);
+      }
+    }
+
+    .icon-box {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.35s ease;
+    }
+
+    &:hover .icon-box {
+      transform: scale(1.08) rotate(2deg);
+    }
+
+    .card-details {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .tag-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .store-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.18rem 0.55rem;
+      border-radius: 50px;
+
+      &.tag-ios {
+        background: rgba(32, 114, 243, 0.25);
+        color: #70baff;
+        border: 1px solid rgba(32, 114, 243, 0.4);
+      }
+
+      &.tag-android {
+        background: rgba(52, 168, 83, 0.25);
+        color: #8ce090;
+        border: 1px solid rgba(52, 168, 83, 0.4);
+      }
+
+      &.tag-huawei {
+        background: rgba(237, 62, 69, 0.25);
+        color: #ff948b;
+        border: 1px solid rgba(237, 62, 69, 0.4);
+      }
+    }
+
+    .store-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .store-sub {
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.68);
+      margin-top: 0.15rem;
+      font-weight: 500;
+    }
+  }
+
+  // 1. Apple App Store (Cuadrante Superior Izquierdo)
+  .card-apple {
+    top: 6%;
+    left: 0%;
+    animation: floatApple 6.2s ease-in-out infinite;
+
+    &:hover .card-glass {
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(32, 114, 243, 0.5);
+      border-color: rgba(32, 114, 243, 0.75);
+    }
+  }
+
+  @keyframes floatApple {
+    0%, 100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+      transform: translate(6px, -18px) rotate(-1.5deg);
+    }
+    66% {
+      transform: translate(-5px, -6px) rotate(1.2deg);
+    }
+  }
+
+  // 2. Google Play (Cuadrante Medio Derecho)
+  .card-google {
+    top: 36%;
+    right: 0%;
+    animation: floatGoogle 7.4s ease-in-out infinite -2.5s;
+
+    &:hover .card-glass {
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(66, 133, 244, 0.5);
+      border-color: rgba(66, 133, 244, 0.75);
+    }
+  }
+
+  @keyframes floatGoogle {
+    0%, 100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+      transform: translate(-8px, 18px) rotate(1.8deg);
+    }
+    66% {
+      transform: translate(6px, 8px) rotate(-1.2deg);
+    }
+  }
+
+  // 3. Huawei AppGallery (Cuadrante Inferior Izquierdo)
+  .card-huawei {
+    bottom: 6%;
+    left: 4%;
+    animation: floatHuawei 6.8s ease-in-out infinite -4.5s;
+
+    &:hover .card-glass {
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(237, 62, 69, 0.5);
+      border-color: rgba(237, 62, 69, 0.75);
+    }
+  }
+
+  @keyframes floatHuawei {
+    0%, 100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+      transform: translate(8px, -15px) rotate(1.6deg);
+    }
+    66% {
+      transform: translate(-6px, 12px) rotate(-1.8deg);
+    }
+  }
+
+  // Adaptabilidad responsiva para pantallas móviles y tablets
+  @media (max-width: 991px) {
+    .floating-stage-container {
+      min-height: auto;
+      padding: 1rem 0;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .ambient-glow {
+      width: 260px;
+      height: 260px;
+    }
+
+    .orbit-ring,
+    .orbital-nexus {
+      display: none;
+    }
+
+    .store-card {
+      position: static;
+      width: 100%;
+      max-width: 320px;
+
+      .card-glass {
+        min-width: unset;
+        width: 100%;
+      }
+    }
+
+    .card-apple {
+      animation: floatMobile1 5s ease-in-out infinite;
+    }
+
+    .card-google {
+      animation: floatMobile2 5.5s ease-in-out infinite -1.8s;
+    }
+
+    .card-huawei {
+      animation: floatMobile3 5.2s ease-in-out infinite -3.2s;
+    }
+
+    @keyframes floatMobile1 {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+
+    @keyframes floatMobile2 {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(7px); }
+    }
+
+    @keyframes floatMobile3 {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+  }
+</style>

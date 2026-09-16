@@ -1,0 +1,35 @@
+---
+// src/layouts/Layout.astro
+import Navbar from '../components/Navbar.astro';
+import '../styles/main.scss';
+
+interface Props {
+	title?: string;
+}
+
+const { title = "Desplegamos" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Desplegamos - Proyecto Web con Astro y Bootstrap" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="/assets/logo.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<!-- Navbar sticky visible en todas las rutas -->
+		<Navbar />
+
+		<!-- Contenido principal -->
+		<slot />
+
+		<!-- Bootstrap 5.3 Bundle JS -->
+		<script>
+			import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+		</script>
+	</body>
+</html>
