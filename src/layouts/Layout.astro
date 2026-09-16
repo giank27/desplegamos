@@ -16,7 +16,7 @@ const { title = "Desplegamos" } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Desplegamos - Proyecto Web con Astro y Bootstrap" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/png" href="/assets/logo.png" />
+		<link rel="icon" type="image/png" href={`${import.meta.env.BASE_URL}/assets/logo.png`} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
